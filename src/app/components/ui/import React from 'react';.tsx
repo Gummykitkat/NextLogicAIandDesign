@@ -7,7 +7,7 @@ export const Logo = () => {
       <Image
         src="/logo.png"
         alt="Next Logic AI and Design Logo"
-        fill
+        fill={true}
         style={{ objectFit: 'contain' }}
         priority
       />
