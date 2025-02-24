@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/ui/logo';
+import { Logo } from '@/components/ui/Logo';
 
 export default function Home() {
   const router = useRouter();

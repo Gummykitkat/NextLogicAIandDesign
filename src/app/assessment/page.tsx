@@ -132,15 +132,16 @@ export default function Assessment() {
       setCurrentQuestionId('start');
     }
   };
+  const [primaryFocus, setPrimaryFocus] = useState<string>('automation');
 
   const generateRecommendations = () => {
     const maxScore = Math.max(scores.automation, scores.analysis, scores.integration);
-    let primaryFocus = 'automation';
-    if (scores.analysis === maxScore) primaryFocus = 'analysis';
-    if (scores.integration === maxScore) primaryFocus = 'integration';
+    let newPrimaryFocus = 'automation';
+    if (scores.analysis === maxScore) newPrimaryFocus = 'data analysis';
+    if (scores.integration === maxScore) newPrimaryFocus = 'system integration';
+    setPrimaryFocus(newPrimaryFocus);
     setCurrentQuestionId('results');
   };
-
   const handleScheduleConsultation = () => {
     // Pass assessment scores to the schedule page via URL query or localStorage
     const query = new URLSearchParams({ scores: JSON.stringify(scores) }).toString();
@@ -199,17 +200,18 @@ export default function Assessment() {
               </div>
 
               <p className="text-gray-300">
-                Based on your responses, we recommend focusing on{' '}
-                <span className="text-blue-500">
-                  {scores.automation === Math.max(scores.automation, scores.analysis, scores.integration)
-                    ? 'automation'
-                    : scores.analysis === Math.max(scores.automation, scores.analysis, scores.integration)
-                    ? 'data analysis'
-                    : 'system integration'}
-                </span>{' '}
-                to maximize your AI potential. Let’s schedule a consultation to discuss next steps!
-              </p>
-
+  Based on your assessment, your organization shows the strongest potential in{' '}
+  <span className="text-blue-500 font-semibold">{primaryFocus}</span>.
+  {primaryFocus === 'automation' && (
+    " Our analysis suggests focusing on streamlining your processes through AI automation."
+  )}
+  {primaryFocus === 'data analysis' && (
+    " We recommend prioritizing data analytics capabilities to unlock valuable insights."
+  )}
+  {primaryFocus === 'system integration' && (
+    " Your organization would benefit most from integrating AI into your existing systems."
+  )}
+</p>
               <Button
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
                 onClick={handleScheduleConsultation}

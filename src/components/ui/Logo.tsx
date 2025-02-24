@@ -9,8 +9,8 @@ export const Logo = () => {
       <Image
         src="/logo.png"
         alt="Next Logic AI and Design Logo"
-        fill
-        style={{ objectFit: 'contain' }}
+        width={5000}  // Replace with actual dimensions
+        height={3000}
         priority
       />
     </div>

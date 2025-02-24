@@ -3,8 +3,9 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Brain, Code, Sparkles, ArrowRight } from '@lucide/react';
+import { Brain, Code, Sparkles, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function Services() {
   const router = useRouter();
@@ -52,9 +53,9 @@ export default function Services() {
     <div className="min-h-screen bg-black text-white pt-24">
       <div className="max-w-7xl mx-auto px-6">
         <nav className="flex justify-between items-center mb-12">
-          <div className="flex items-center space-x-4">
-            <img src="/logo.png" alt="Next Logic Logo" className="h-10" />
-          </div>
+<div className="flex items-center space-x-4">
+  <Image src="/logo.png" alt="Next Logic Logo" width={40} height={40} className="h-10" />
+</div>
           <div className="space-x-6">
             <Button 
               variant="ghost"
