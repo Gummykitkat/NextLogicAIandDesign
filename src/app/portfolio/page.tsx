@@ -431,7 +431,7 @@ export default function Portfolio() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to become our next success story?</h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI and web solutions can deliver similar transformative results for your business.
+              Let&apos;s discuss how our AI and web solutions can deliver similar transformative results for your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button 

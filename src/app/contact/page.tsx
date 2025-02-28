@@ -16,7 +16,6 @@ import {
   BarChart,
   Brain,
   Code,
-  Shield
 } from 'lucide-react';
 
 export default function Contact() {
@@ -142,7 +141,7 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl">
-              Ready to transform your business with Next Logic Design and AI? We've designed a 
+              Ready to transform your business with Next Logic Design and AI? We&apos;ve designed a 
               straightforward process to help you move from initial conversation to successful implementation.
             </p>
           </section>
@@ -294,7 +293,7 @@ export default function Contact() {
                     </div>
                     <h3 className="text-xl font-bold text-green-400 mb-2">Message Sent Successfully!</h3>
                     <p className="text-gray-300">
-                      Thank you for reaching out. We'll get back to you within 24 hours.
+                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                     </p>
                   </div>
                 ) : (
