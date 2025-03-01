@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Brain, Code, Palette } from 'lucide-react';
+import { Brain, Code, Palette, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Card } from './ui/card';
 
 export default function HomeContent() {
   // Navigate function using window.location
