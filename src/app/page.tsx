@@ -1,8 +1,8 @@
 'use client';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import Image from 'next/image';
 import { 
   Brain,
   Code,
@@ -78,9 +78,10 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <>
+      <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Animated Background */}
-      <div 
+      <div
         className="fixed inset-0 opacity-20"
         style={{
           background: `
@@ -88,51 +89,52 @@ export default function Home() {
             radial-gradient(circle at ${mousePosition.x - 400}px ${mousePosition.y + 100}px, rgb(0, 255, 128) 0%, transparent 40%),
             radial-gradient(circle at ${mousePosition.x + 200}px ${mousePosition.y - 300}px, rgb(112, 0, 255) 0%, transparent 40%)
           `
-        }}
-      />
+        }} />
 
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-black bg-opacity-50 backdrop-blur">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigateTo('/')}>
-              <img 
-                src="/logo.png" 
-                alt="Next Logic AI" 
+              <Image
+                src="/logo.png"
+                alt="Next Logic AI"
+                width={160}
+                height={160}
                 className="h-40 w-auto drop-shadow-[0_0_15px_rgba(255,0,128,0.7)]"
-                style={{ filter: 'drop-shadow(0 0 12px rgba(0, 255, 255, 0.6))' }}
+                style={{ filter: 'drop-shadow(0 0 12px rgba(0, 255, 255, 0.6))' }} 
               />
             </div>
             <div className="flex space-x-8">
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="text-white hover:text-pink-500"
                 onClick={() => navigateTo('/services')}
               >
                 Services
               </Button>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="text-white hover:text-pink-500"
                 onClick={() => navigateTo('/portfolio')}
               >
                 Portfolio
               </Button>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="text-white hover:text-pink-500"
                 onClick={() => navigateTo('/about')}
               >
                 About
               </Button>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="text-white hover:text-pink-500"
                 onClick={() => navigateTo('/contact')}
               >
                 Contact
               </Button>
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-pink-500 to-purple-500 text-white"
                 onClick={() => navigateTo('/assessment')}
               >
@@ -158,7 +160,7 @@ export default function Home() {
               We blend cutting-edge AI with explosive creativity to transform your business into a digital powerhouse.
             </p>
             <div className="mt-12 flex space-x-6">
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-6 text-lg"
                 onClick={() => navigateTo('/assessment')}
               >
@@ -167,8 +169,8 @@ export default function Home() {
                   <ArrowRight className="ml-2" />
                 </span>
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-6 text-lg"
                 onClick={() => navigateTo('/portfolio')}
               >
@@ -187,7 +189,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
-              <Card 
+              <Card
                 key={service.title}
                 className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500 cursor-pointer transition-all duration-300"
                 onClick={() => navigateTo(service.path)}
@@ -202,8 +204,8 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
               onClick={() => navigateTo('/services')}
             >
@@ -224,7 +226,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {quickLinks.map((link) => (
-              <Card 
+              <Card
                 key={link.title}
                 className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-green-400 cursor-pointer transition-all duration-300"
                 onClick={() => navigateTo(link.path)}
@@ -263,7 +265,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center mt-10">
-            <Button 
+            <Button
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-6 text-lg"
               onClick={() => navigateTo('/contact')}
             >
@@ -279,58 +281,57 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative py-8 bg-black bg-opacity-50 backdrop-blur">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            <div className="mb-6 md:mb-0">
-              <img 
-                src="/logo.png" 
-                alt="Next Logic AI" 
-                className="h-20 w-auto drop-shadow-[0_0_15px_rgba(255,0,128,0.7)]"
-                style={{ filter: 'drop-shadow(0 0 12px rgba(0, 255, 255, 0.6))' }}
-              />
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-pink-500"
-                onClick={() => navigateTo('/services')}
-              >
-                Services
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-pink-500"
-                onClick={() => navigateTo('/portfolio')}
-              >
-                Portfolio
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-pink-500"
-                onClick={() => navigateTo('/team')}
-              >
-                Team
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-pink-500"
-                onClick={() => navigateTo('/about')}
-              >
-                About
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-pink-500"
-                onClick={() => navigateTo('/contact')}
-              >
-                Contact
-              </Button>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-6 text-center">
-            <p className="text-gray-400">&copy; 2025 Next Logic Design and AI. All rights reserved.</p>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Next Logic AI"
+            width={80}
+            height={80}
+            className="h-20 w-auto drop-shadow-[0_0_15px_rgba(255,0,128,0.7)]"
+            style={{ filter: 'drop-shadow(0 0 12px rgba(0, 255, 255, 0.6))' }} 
+          />
         </div>
+        <div className="flex flex-wrap justify-center gap-6">
+          <Button
+            variant="ghost"
+            className="text-white hover:text-pink-500"
+            onClick={() => navigateTo('/services')}
+          >
+            Services
+          </Button>
+          <Button
+            variant="ghost"
+            className="text-white hover:text-pink-500"
+            onClick={() => navigateTo('/portfolio')}
+          >
+            Portfolio
+          </Button>
+          <Button
+            variant="ghost"
+            className="text-white hover:text-pink-500"
+            onClick={() => navigateTo('/team')}
+          >
+            Team
+          </Button>
+          <Button
+            variant="ghost"
+            className="text-white hover:text-pink-500"
+            onClick={() => navigateTo('/about')}
+          >
+            About
+          </Button>
+          <Button
+            variant="ghost"
+            className="text-white hover:text-pink-500"
+            onClick={() => navigateTo('/contact')}
+          >
+            Contact
+          </Button>
+        </div>
+      <div className="border-t border-gray-800 pt-6 text-center">
+        <p className="text-gray-400">&copy; 2025 Next Logic Design and AI. All rights reserved.</p>
+      </div>
       </footer>
     </div>
+    </>
   );
 }
