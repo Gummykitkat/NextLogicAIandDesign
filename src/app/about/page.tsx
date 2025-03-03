@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 // TEST SAVE
 
@@ -7,6 +8,14 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
+=======
+'use client';
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { 
+>>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
   Brain,
   Users,
   Code,
@@ -336,8 +345,12 @@ export default function About() {
               Ready to transform your business?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
               Let&aposs discuss how our AI and web solutions can deliver measurable
               results for your organization.
+=======
+              Let&apos;s discuss how our AI and web solutions can deliver measurable results for your organization.
+>>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
             </p>
             <Button
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-6 text-lg"

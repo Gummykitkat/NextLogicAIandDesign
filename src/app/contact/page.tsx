@@ -17,7 +17,11 @@ import {
   BarChart,
   Brain,
   Code,
+<<<<<<< HEAD
 } from "lucide-react";
+=======
+} from 'lucide-react';
+>>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
 
 export default function Contact() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -149,9 +153,14 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl">
+<<<<<<< HEAD
               Ready to transform your business with Next Logic Design and AI?
               We&apos;ve designed a straightforward process to help you move from
               initial conversation to successful implementation.
+=======
+              Ready to transform your business with Next Logic Design and AI? We&apos;ve designed a 
+              straightforward process to help you move from initial conversation to successful implementation.
+>>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
             </p>
           </section>
 
@@ -336,8 +345,12 @@ export default function Contact() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-300">
+<<<<<<< HEAD
                       Thank you for reaching out. We&apos;ll get back to you within
                       24 hours.
+=======
+                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
+>>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
                     </p>
                   </div>
                 ) : (
