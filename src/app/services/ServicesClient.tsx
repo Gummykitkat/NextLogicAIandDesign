@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Brain, Code, Sparkles, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import Image from 'next/image';
 
 export default function Services() {
   const router = useRouter();

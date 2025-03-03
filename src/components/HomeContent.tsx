@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Brain, Code, Palette, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -96,7 +95,7 @@ export default function HomeContent() {
       <div className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <Card 
                 key={service.title}
                 className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500"
