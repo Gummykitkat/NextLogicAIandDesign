@@ -1,6 +1,6 @@
 'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { 
@@ -300,7 +300,7 @@ export default function About() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to transform your business?</h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI and web solutions can deliver measurable results for your organization.
+              Let&apos;s discuss how our AI and web solutions can deliver measurable results for your organization.
             </p>
             <Button 
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-6 text-lg"
