@@ -38,6 +38,7 @@ export default function HomeContent() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div onClick={() => navigateTo('/')} className="cursor-pointer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
             </div>
             <div className="flex space-x-4">

@@ -54,7 +54,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6">
         <nav className="flex justify-between items-center mb-12">
 <div className="flex items-center space-x-4">
-  <Image src="/logo.png" alt="Next Logic Logo" width={40} height={40} className="h-10" />
+  {/* eslint-disable-next-line @next/next/no-img-element */}
+  <img src="/logo.png" alt="Next Logic Logo" width={40} height={40} className="h-10" />
 </div>
           <div className="space-x-6">
             <Button 

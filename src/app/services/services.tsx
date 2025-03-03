@@ -164,6 +164,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigateTo('/')}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/logo.png" 
                 alt="Next Logic AI" 
