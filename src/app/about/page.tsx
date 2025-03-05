@@ -16,7 +16,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  Calendar,
 } from 'lucide-react';
 
 export default function About() {
@@ -109,15 +108,10 @@ export default function About() {
     {
       icon: Mail,
       title: "Email",
-      details: "calgary@cyber-services.com",
+      details: "info@nextlogicai.com",
     },
-    {
-      icon: Calendar,
-      title: "Founded",
-      details: "February 2025",
-    },
+    ,
   ];
-
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Animated Background */}
@@ -297,20 +291,22 @@ export default function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactInfo.map((item, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500 transition-all duration-300 text-center"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
-                      <item.icon className="h-6 w-6 text-pink-500" />
+                item && (
+                  <Card
+                    key={index}
+                    className="p-6 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500 transition-all duration-300 text-center"
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
+                        <item.icon className="h-6 w-6 text-pink-500" />
+                      </div>
                     </div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-purple-400">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-300">{item.details}</p>
-                </Card>
+                    <h3 className="text-xl font-bold mb-2 text-purple-400">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300">{item.details}</p>
+                  </Card>
+                )
               ))}
             </div>
           </section>
