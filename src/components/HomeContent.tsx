@@ -37,6 +37,7 @@ export default function HomeContent() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div onClick={() => navigateTo('/')} className="cursor-pointer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
             </div>
             <div className="flex space-x-4">
@@ -94,7 +95,7 @@ export default function HomeContent() {
       <div className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <Card 
                 key={service.title}
                 className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500"

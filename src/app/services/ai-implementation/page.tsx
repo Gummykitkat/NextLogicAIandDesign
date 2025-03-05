@@ -59,8 +59,8 @@ export default function Services() {
               key={index}
               className="bg-gray-900 border-gray-800 p-8 hover:border-blue-500 transition-all duration-300"
             >
-              <service.icon className="h-12 w-12 text-blue-500 mb-6" />
-              <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
+              <service.icon className="h-12 w-12 text-yellow-500 mb-6" />
+              <h2 className="text-purple-500 font-bold mb-4">{service.title}</h2>
               <p className="text-gray-400 mb-6">{service.description}</p>
               <ul className="space-y-3 mb-8">
                 {service.features.map((feature, idx) => (
