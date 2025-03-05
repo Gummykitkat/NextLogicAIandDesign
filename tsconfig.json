@@ -19,11 +19,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-<<<<<<< HEAD
-    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-=======
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
     "incremental": true,
     "plugins": [
       {
@@ -37,20 +33,11 @@
     }
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/types/app/page.tsx",
     "jsx.d.ts"
-=======
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types",
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
   ],
   "exclude": [
     "node_modules"

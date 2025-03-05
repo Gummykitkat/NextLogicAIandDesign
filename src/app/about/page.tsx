@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-"use client";
-// TEST SAVE
-
-
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import {
-=======
 'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { 
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
   Brain,
   Users,
   Code,
@@ -29,8 +17,7 @@ import {
   Phone,
   Mail,
   Calendar,
-  ArrowRight,
-} from "lucide-react";
+} from 'lucide-react';
 
 export default function About() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -112,7 +99,7 @@ export default function About() {
     {
       icon: MapPin,
       title: "Address",
-      details: "311 Candle Place SW, Calgary, AB T2W 3B3",
+      details: "Calgary, AB T2W 3B3",
     },
     {
       icon: Phone,
@@ -345,20 +332,14 @@ export default function About() {
               Ready to transform your business?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-              Let&aposs discuss how our AI and web solutions can deliver measurable
-              results for your organization.
-=======
               Let&apos;s discuss how our AI and web solutions can deliver measurable results for your organization.
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
             </p>
             <Button
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-6 text-lg"
               onClick={() => navigateTo("/assessment")}
             >
               <span className="flex items-center">
-                Start Your Journey
-                <ArrowRight className="ml-2" />
+                Get Started Now
               </span>
             </Button>
           </div>

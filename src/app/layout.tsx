@@ -2,12 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-<<<<<<< HEAD
-import { SpeedInsights } from "@vercel/speed-insights/react"; // Added this import
-import React from "react";
-=======
 import { SpeedInsights } from "@vercel/speed-insights/react";
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
+import React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

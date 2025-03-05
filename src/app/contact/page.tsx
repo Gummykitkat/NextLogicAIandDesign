@@ -17,11 +17,7 @@ import {
   BarChart,
   Brain,
   Code,
-<<<<<<< HEAD
 } from "lucide-react";
-=======
-} from 'lucide-react';
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
 
 export default function Contact() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -146,25 +142,18 @@ export default function Contact() {
       <div className="pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           {/* Contact Intro */}
-          <section className="mb-16">
-            <h1 className="text-5xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                Get Started
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl">
-<<<<<<< HEAD
-              Ready to transform your business with Next Logic Design and AI?
-              We&apos;ve designed a straightforward process to help you move from
-              initial conversation to successful implementation.
-=======
-              Ready to transform your business with Next Logic Design and AI? We&apos;ve designed a 
-              straightforward process to help you move from initial conversation to successful implementation.
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
-            </p>
-          </section>
-
-          {/* Contact Info Cards */}
+<section className="mb-16">
+  <h1 className="text-5xl font-bold mb-6">
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+      Get Started
+    </span>
+  </h1>
+  <p className="text-xl text-gray-300 max-w-3xl">
+    Ready to transform your business with Next Logic Design and AI?
+    We&apos;ve designed a straightforward process to help you move from
+    initial conversation to successful implementation.
+  </p>
+</section>
           <section className="mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -344,88 +333,81 @@ export default function Contact() {
                     <h3 className="text-xl font-bold text-green-400 mb-2">
                       Message Sent Successfully!
                     </h3>
-                    <p className="text-gray-300">
-<<<<<<< HEAD
-                      Thank you for reaching out. We&apos;ll get back to you within
-                      24 hours.
-=======
-                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
-                    </p>
+<p className="text-gray-300">
+  Thank you for reaching out. We&apos;ll get back to you within 24 hours.
+</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="name"
-                          className="text-gray-300 block text-sm font-medium"
-                        >
-                          Your Name
-                        </label>
-                        <input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
-                          placeholder="Your Name"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="name"
+                        className="text-gray-300 block text-sm font-medium"
+                      >
+                        Your Name
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
+                        placeholder="Your Name"
+                      />
+                    </div>
 
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="email"
-                          className="text-gray-300 block text-sm font-medium"
-                        >
-                          Email Address
-                        </label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
-                          placeholder="your@email.com"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="email"
+                        className="text-gray-300 block text-sm font-medium"
+                      >
+                        Email Address
+                      </label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
+                        placeholder="your@email.com"
+                      />
+                    </div>
 
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="company"
-                          className="text-gray-300 block text-sm font-medium"
-                        >
-                          Company Name
-                        </label>
-                        <input
-                          id="company"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleInputChange}
-                          className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
-                          placeholder="Your Company"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="company"
+                        className="text-gray-300 block text-sm font-medium"
+                      >
+                        Company Name
+                      </label>
+                      <input
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
+                        placeholder="Your Company"
+                      />
+                    </div>
 
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="phone"
-                          className="text-gray-300 block text-sm font-medium"
-                        >
-                          Phone Number
-                        </label>
-                        <input
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
-                          placeholder="(###) ###-####"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="phone"
+                        className="text-gray-300 block text-sm font-medium"
+                      >
+                        Phone Number
+                      </label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 bg-black/50 border border-gray-700 focus:border-pink-500 text-white rounded-md"
+                        placeholder="(###) ###-####"
+                      />
                     </div>
 
                     <div className="space-y-2">

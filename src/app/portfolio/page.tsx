@@ -475,12 +475,8 @@ export default function Portfolio() {
               Ready to become our next success story?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Let&apos;s discuss how our AI and web solutions can deliver similar
               transformative results for your business.
-=======
-              Let&apos;s discuss how our AI and web solutions can deliver similar transformative results for your business.
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button

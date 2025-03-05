@@ -1,10 +1,6 @@
 "use client";
 
 import React from 'react';
-<<<<<<< HEAD
-import { Card } from '@/components/ui/card';
-=======
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
 import { Brain, Code, Palette, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { Card } from './ui/card';
 

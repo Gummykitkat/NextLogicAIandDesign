@@ -27,17 +27,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-<<<<<<< HEAD
-    "@types/node": "^20",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19",
-=======
-    "@types/estree": "^1.0.6",
-    "@types/json-schema": "^7.0.15",
-    "@types/node": "^20.17.22",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
->>>>>>> 47657bdc90702c3d231521b9de7fb7ba50f1b673
+"@types/estree": "^1.0.6",
+"@types/json-schema": "^7.0.15",
+"@types/node": "^20.17.22",
+"@types/react": "^19.0.10",
+"@types/react-dom": "^19.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
