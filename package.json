@@ -15,7 +15,10 @@
     "@radix-ui/react-slot": "1.2.3",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
+<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
+=======
+>>>>>>> 53a6f856ed922ae955030a1f40a1db3fa529d219
     "chart.js": "^4.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -38,7 +41,11 @@
     "@types/react-dom": "19.1.7",
     "eslint": "^9.33.0",
     "eslint-config-next": "15.4.6",
+<<<<<<< HEAD
     "postcss": "^8.5.6",
+=======
+    "postcss": "8.5.6",
+>>>>>>> 53a6f856ed922ae955030a1f40a1db3fa529d219
     "tailwindcss": "^4.1.11",
     "typescript": "5.9.2"
   }
