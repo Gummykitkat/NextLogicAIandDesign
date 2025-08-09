@@ -35,23 +35,31 @@ export default function Home() {
   const services = [
     {
       icon: Brain,
-      title: 'AI Implementation',
-      description: 'Strategic AI solutions to improve your business operations with measurable ROI',
-      price: '$597',
+      title: [
+        { text: 'AI', color: 'text-pink-500' },
+        { text: ' Implementation', color: 'text-purple-500' },
+      ],
+      description: [
+        { text: 'Strategic ', color: 'text-pink-500' },
+        { text: 'AI', color: 'text-green-500' },
+        { text: ' solutions to improve your business operations with ', color: 'text-pink-500' },
+        { text: 'measurable ROI', color: 'text-blue-500' },
+      ],
+      price: 'Starting at $599',
       path: '/services#ai-consultancy',
     },
     {
       icon: Code,
       title: 'Web Development',
-      description: 'Create stunning, high-performance digital experiences that transform your online presence',
-      price: '$997',
+      description: 'Create stunning, high-performance digital experiences that build your online presence',
+      price: 'Starting at $999',
       path: '/services#web-development',
     },
     {
       icon: Palette,
       title: 'Enterprise Solutions',
       description: 'Comprehensive AI strategy with multi-department implementation',
-      price: '$2,497',
+      price: 'Starting at $2499',
       path: '/services#enterprise-solutions',
     },
   ];
@@ -75,6 +83,30 @@ export default function Home() {
       title: 'Our Approach',
       description: 'Learn about our methodology and how we ensure successful project delivery every time.',
       path: '/about',
+    },
+  ];
+
+  const whatWeDo = [
+    {
+      icon: Brain,
+      title: 'AI Consulting',
+      description: 'Harness AI for smarter operations and data-driven growth.',
+      price: '$80/Hour',
+      path: '/services#ai-consulting',
+    },
+    {
+      icon: Code,
+      title: 'Web & App Design',
+      description: 'Build intuitive, beautiful digital experiences.',
+      price: '$60/Hour',
+      path: '/services#web-app-design',
+    },
+    {
+      icon: Palette,
+      title: 'Branding',
+      description: 'Create a memorable identity that connects.',
+      price: '$50/Hour',
+      path: '/services#branding',
     },
   ];
 
@@ -167,6 +199,31 @@ export default function Home() {
           </div>
         </div>
 
+        {/* What We Do Section */}
+        <div className="relative py-16 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+              What We Do
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {whatWeDo.map((item) => (
+                <Card
+                  key={item.title}
+                  className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500 cursor-pointer transition-all duration-300"
+                  onClick={() => navigateTo(item.path)}
+                >
+                  <item.icon className="h-12 w-12 text-pink-500 mb-2" />
+                  <h3 className="text-purple-500 text-xl font-semibold mb-8 text-center">{item.title}</h3>
+                  <p className="text-gray-600 mb-4 text-center">{item.description}</p>
+                  <p className="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                    {item.price}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Services Section */}
         <div className="relative py-16">
           <div className="max-w-7xl mx-auto px-6">
@@ -176,14 +233,30 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service) => (
                 <Card
-                  key={service.title}
+                  key={service.title.map ? service.title.map((part) => part.text).join('') : service.title}
                   className="p-8 bg-black bg-opacity-50 backdrop-blur border-gray-800 hover:border-pink-500 cursor-pointer transition-all duration-300"
                   onClick={() => navigateTo(service.path)}
                 >
-                  <service.icon className="h-12 w-12 text-pink-500 mb-6" />
-                  <h3 className="text-purple-500 font-bold mb-4">{service.title}</h3>
-                  <p className="text-pink-500 mb-4">{service.description}</p>
-                  <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                  <service.icon className="h-12 w-12 text-pink-500 mb-2" />
+                  <h3 className="text-purple-500 text-xl font-bold mb-8 text-center">
+                    {Array.isArray(service.title)
+                      ? service.title.map((part, index) => (
+                          <span key={index} className={part.color}>
+                            {part.text}
+                          </span>
+                        ))
+                      : service.title}
+                  </h3>
+                  <p className="text-pink-500 mb-4">
+                    {Array.isArray(service.description)
+                      ? service.description.map((part, index) => (
+                          <span key={index} className={part.color}>
+                            {part.text}
+                          </span>
+                        ))
+                      : service.description}
+                  </p>
+                  <p className="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
                     {service.price}
                   </p>
                 </Card>
