@@ -7,17 +7,19 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant = 'default', colorScheme = 'light', ...props }, ref) => (
+  ({ className, variant = 'bordered', colorScheme = 'dark', ...props }, ref) => (
     <div
       ref={ref}
-      className={cn(
-        "rounded-xl border border-gray-200 bg-white text-gray-950 shadow",
-        variant === 'elevated' && 'shadow-lg',
-        variant === 'bordered' && 'border-2',
-        colorScheme === 'dark' && 'bg-gray-900 text-white',
-        className
-      )}
-      {...props}
+className={cn(
+  "rounded-3xl border-4 border-fuchsia-400 bg-pink-500 text-pink-500 box-shadow-white", // more visible border
+  {
+    'shadow-lg': variant === 'elevated',
+    'shadow-slate-500': variant === 'bordered',
+    'bg-gray-900 text-fuchsia-300 shadow border-fuchsia-400': colorScheme === 'dark', // visible border in dark mode
+  },
+  className
+)}
+{...props}
     />
   )
 )
